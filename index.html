@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="8種類のフォントを比較するためのページです。">
+    <meta name="description" content="A comparison of eight different typefaces.">
     <title>Font Comparison</title>
 
     <style>
@@ -16,7 +16,6 @@
             font-family: "Font01";
             src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/fonts/MPLUS1P-BLACK.woff") format("woff");
             font-weight: 900;
-            font-style: normal;
             font-display: swap;
         }
 
@@ -24,7 +23,6 @@
             font-family: "Font02";
             src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/fonts/MPLUS1P-BOLD.woff") format("woff");
             font-weight: 700;
-            font-style: normal;
             font-display: swap;
         }
 
@@ -32,7 +30,6 @@
             font-family: "Font03";
             src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/fonts/MPLUS1P-EXTRABOLD.woff") format("woff");
             font-weight: 800;
-            font-style: normal;
             font-display: swap;
         }
 
@@ -40,7 +37,6 @@
             font-family: "Font04";
             src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/fonts/MPLUS1P-MEDIUM.woff") format("woff");
             font-weight: 500;
-            font-style: normal;
             font-display: swap;
         }
 
@@ -48,7 +44,6 @@
             font-family: "Font05";
             src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/fonts/MPLUS1P-REGULAR.woff") format("woff");
             font-weight: 400;
-            font-style: normal;
             font-display: swap;
         }
 
@@ -56,7 +51,6 @@
             font-family: "Font06";
             src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/fonts/BAHNSCHRIFT.woff") format("woff");
             font-weight: 400;
-            font-style: normal;
             font-display: swap;
         }
 
@@ -64,7 +58,6 @@
             font-family: "Font07";
             src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/fonts/BAHNSCHRIFT_1.woff") format("woff");
             font-weight: 400;
-            font-style: normal;
             font-display: swap;
         }
 
@@ -72,7 +65,6 @@
             font-family: "Font08";
             src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/fonts/BAHNSCHRIFT_2.woff") format("woff");
             font-weight: 400;
-            font-style: normal;
             font-display: swap;
         }
 
@@ -173,8 +165,9 @@
         }
 
         .sample {
-            min-height: 180px;
+            min-height: 220px;
             padding: 30px 25px;
+            overflow-wrap: break-word;
         }
 
         .sample h2 {
@@ -183,8 +176,17 @@
             font-weight: normal;
         }
 
-        .sample p {
-            margin: 8px 0;
+        .sample .alphabet {
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .sample .numbers {
+            font-size: 17px;
+            letter-spacing: 0.04em;
+        }
+
+        .sample .sentence {
             font-size: 13px;
             line-height: 1.8;
         }
@@ -285,166 +287,232 @@
 
 <body>
 
-    <header class="header">
-        <h1>FONT COMPARISON</h1>
-        <p>8 TYPEFACES / FONT SPECIMEN</p>
-    </header>
+<header class="header">
+    <h1>FONT COMPARISON</h1>
+    <p>8 TYPEFACES / FONT SPECIMEN</p>
+</header>
 
 
-    <main class="container">
+<main class="container">
 
-        <section class="intro">
-            <span>TYPOGRAPHY COLLECTION</span>
-            <h2>フォント比較ページ</h2>
-            <p>8種類のフォントを同じ文章で比較できます。</p>
-        </section>
-
-
-        <section class="font-grid">
-
-            <!-- FONT 01 -->
-            <article class="font-card">
-                <div class="card-header">
-                    <span>FONT 01</span>
-                    <span>01 / 08</span>
-                </div>
-
-                <div class="sample font01">
-                    <h2>美しい文字の世界</h2>
-                    <p>Typography is the art of arranging type.</p>
-                    <p>あいうえお ABCDEFG 1234567890</p>
-                </div>
-
-                <div class="card-footer">M PLUS 1p BLACK</div>
-            </article>
+    <section class="intro">
+        <span>TYPOGRAPHY COLLECTION</span>
+        <h2>Font Comparison</h2>
+        <p>Compare eight different typefaces using identical English text.</p>
+    </section>
 
 
-            <!-- FONT 02 -->
-            <article class="font-card">
-                <div class="card-header">
-                    <span>FONT 02</span>
-                    <span>02 / 08</span>
-                </div>
-
-                <div class="sample font02">
-                    <h2>美しい文字の世界</h2>
-                    <p>Typography is the art of arranging type.</p>
-                    <p>あいうえお ABCDEFG 1234567890</p>
-                </div>
-
-                <div class="card-footer">M PLUS 1p BOLD</div>
-            </article>
+    <section class="font-grid">
 
 
-            <!-- FONT 03 -->
-            <article class="font-card">
-                <div class="card-header">
-                    <span>FONT 03</span>
-                    <span>03 / 08</span>
-                </div>
+        <!-- FONT 01 -->
+        <article class="font-card">
+            <div class="card-header">
+                <span>FONT 01</span>
+                <span>01 / 08</span>
+            </div>
 
-                <div class="sample font03">
-                    <h2>美しい文字の世界</h2>
-                    <p>Typography is the art of arranging type.</p>
-                    <p>あいうえお ABCDEFG 1234567890</p>
-                </div>
+            <div class="sample font01">
+                <h2>Typography Design</h2>
+                <p class="alphabet">
+                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                    abcdefghijklmnopqrstuvwxyz
+                </p>
+                <p class="numbers">
+                    0123456789 !@#$%^&*()
+                </p>
+                <p class="sentence">
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
 
-                <div class="card-footer">M PLUS 1p EXTRA BOLD</div>
-            </article>
-
-
-            <!-- FONT 04 -->
-            <article class="font-card">
-                <div class="card-header">
-                    <span>FONT 04</span>
-                    <span>04 / 08</span>
-                </div>
-
-                <div class="sample font04">
-                    <h2>美しい文字の世界</h2>
-                    <p>Typography is the art of arranging type.</p>
-                    <p>あいうえお ABCDEFG 1234567890</p>
-                </div>
-
-                <div class="card-footer">M PLUS 1p MEDIUM</div>
-            </article>
+            <div class="card-footer">M PLUS 1p BLACK</div>
+        </article>
 
 
-            <!-- FONT 05 -->
-            <article class="font-card">
-                <div class="card-header">
-                    <span>FONT 05</span>
-                    <span>05 / 08</span>
-                </div>
+        <!-- FONT 02 -->
+        <article class="font-card">
+            <div class="card-header">
+                <span>FONT 02</span>
+                <span>02 / 08</span>
+            </div>
 
-                <div class="sample font05">
-                    <h2>美しい文字の世界</h2>
-                    <p>Typography is the art of arranging type.</p>
-                    <p>あいうえお ABCDEFG 1234567890</p>
-                </div>
+            <div class="sample font02">
+                <h2>Typography Design</h2>
+                <p class="alphabet">
+                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                    abcdefghijklmnopqrstuvwxyz
+                </p>
+                <p class="numbers">
+                    0123456789 !@#$%^&*()
+                </p>
+                <p class="sentence">
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
 
-                <div class="card-footer">M PLUS 1p REGULAR</div>
-            </article>
-
-
-            <!-- FONT 06 -->
-            <article class="font-card">
-                <div class="card-header">
-                    <span>FONT 06</span>
-                    <span>06 / 08</span>
-                </div>
-
-                <div class="sample font06">
-                    <h2>美しい文字の世界</h2>
-                    <p>Typography is the art of arranging type.</p>
-                    <p>あいうえお ABCDEFG 1234567890</p>
-                </div>
-
-                <div class="card-footer">BAHNSCHRIFT</div>
-            </article>
+            <div class="card-footer">M PLUS 1p BOLD</div>
+        </article>
 
 
-            <!-- FONT 07 -->
-            <article class="font-card">
-                <div class="card-header">
-                    <span>FONT 07</span>
-                    <span>07 / 08</span>
-                </div>
+        <!-- FONT 03 -->
+        <article class="font-card">
+            <div class="card-header">
+                <span>FONT 03</span>
+                <span>03 / 08</span>
+            </div>
 
-                <div class="sample font07">
-                    <h2>美しい文字の世界</h2>
-                    <p>Typography is the art of arranging type.</p>
-                    <p>あいうえお ABCDEFG 1234567890</p>
-                </div>
+            <div class="sample font03">
+                <h2>Typography Design</h2>
+                <p class="alphabet">
+                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                    abcdefghijklmnopqrstuvwxyz
+                </p>
+                <p class="numbers">
+                    0123456789 !@#$%^&*()
+                </p>
+                <p class="sentence">
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
 
-                <div class="card-footer">BAHNSCHRIFT 01</div>
-            </article>
-
-
-            <!-- FONT 08 -->
-            <article class="font-card">
-                <div class="card-header">
-                    <span>FONT 08</span>
-                    <span>08 / 08</span>
-                </div>
-
-                <div class="sample font08">
-                    <h2>美しい文字の世界</h2>
-                    <p>Typography is the art of arranging type.</p>
-                    <p>あいうえお ABCDEFG 1234567890</p>
-                </div>
-
-                <div class="card-footer">BAHNSCHRIFT 02</div>
-            </article>
-
-        </section>
-
-    </main>
+            <div class="card-footer">M PLUS 1p EXTRA BOLD</div>
+        </article>
 
 
-    <footer>
-        FONT COMPARISON — TYPE SPECIMEN
-    </footer>
+        <!-- FONT 04 -->
+        <article class="font-card">
+            <div class="card-header">
+                <span>FONT 04</span>
+                <span>04 / 08</span>
+            </div>
+
+            <div class="sample font04">
+                <h2>Typography Design</h2>
+                <p class="alphabet">
+                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                    abcdefghijklmnopqrstuvwxyz
+                </p>
+                <p class="numbers">
+                    0123456789 !@#$%^&*()
+                </p>
+                <p class="sentence">
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
+
+            <div class="card-footer">M PLUS 1p MEDIUM</div>
+        </article>
+
+
+        <!-- FONT 05 -->
+        <article class="font-card">
+            <div class="card-header">
+                <span>FONT 05</span>
+                <span>05 / 08</span>
+            </div>
+
+            <div class="sample font05">
+                <h2>Typography Design</h2>
+                <p class="alphabet">
+                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                    abcdefghijklmnopqrstuvwxyz
+                </p>
+                <p class="numbers">
+                    0123456789 !@#$%^&*()
+                </p>
+                <p class="sentence">
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
+
+            <div class="card-footer">M PLUS 1p REGULAR</div>
+        </article>
+
+
+        <!-- FONT 06 -->
+        <article class="font-card">
+            <div class="card-header">
+                <span>FONT 06</span>
+                <span>06 / 08</span>
+            </div>
+
+            <div class="sample font06">
+                <h2>Typography Design</h2>
+                <p class="alphabet">
+                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                    abcdefghijklmnopqrstuvwxyz
+                </p>
+                <p class="numbers">
+                    0123456789 !@#$%^&*()
+                </p>
+                <p class="sentence">
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
+
+            <div class="card-footer">BAHNSCHRIFT</div>
+        </article>
+
+
+        <!-- FONT 07 -->
+        <article class="font-card">
+            <div class="card-header">
+                <span>FONT 07</span>
+                <span>07 / 08</span>
+            </div>
+
+            <div class="sample font07">
+                <h2>Typography Design</h2>
+                <p class="alphabet">
+                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                    abcdefghijklmnopqrstuvwxyz
+                </p>
+                <p class="numbers">
+                    0123456789 !@#$%^&*()
+                </p>
+                <p class="sentence">
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
+
+            <div class="card-footer">BAHNSCHRIFT 01</div>
+        </article>
+
+
+        <!-- FONT 08 -->
+        <article class="font-card">
+            <div class="card-header">
+                <span>FONT 08</span>
+                <span>08 / 08</span>
+            </div>
+
+            <div class="sample font08">
+                <h2>Typography Design</h2>
+                <p class="alphabet">
+                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                    abcdefghijklmnopqrstuvwxyz
+                </p>
+                <p class="numbers">
+                    0123456789 !@#$%^&*()
+                </p>
+                <p class="sentence">
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
+
+            <div class="card-footer">BAHNSCHRIFT 02</div>
+        </article>
+
+
+    </section>
+
+</main>
+
+
+<footer>
+    FONT COMPARISON — TYPE SPECIMEN
+</footer>
 
 </body>
 </html>
