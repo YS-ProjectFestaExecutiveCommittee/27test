@@ -1,518 +1,340 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A comparison of eight different typefaces.">
-    <title>Font Comparison</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Comparison</title>
 
-    <style>
-        /* =========================
-           FONT SETTINGS
-        ========================= */
+  <style>
+    /* =========================
+       M PLUS 1p
+    ========================= */
 
-        @font-face {
-            font-family: "Font01";
-            src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/font/MPLUS1P-BLACK.woff") format("woff");
-            font-weight: 900;
-            font-display: swap;
-        }
+    @font-face {
+      font-family: "M PLUS 1p";
+      src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/font/MPLUS1P-REGULAR.woff") format("woff");
+      font-weight: 400;
+      font-display: swap;
+    }
 
-        @font-face {
-            font-family: "Font02";
-            src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/font/MPLUS1P-BOLD.woff") format("woff");
-            font-weight: 700;
-            font-display: swap;
-        }
+    @font-face {
+      font-family: "M PLUS 1p";
+      src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/font/MPLUS1P-MEDIUM.woff") format("woff");
+      font-weight: 500;
+      font-display: swap;
+    }
 
-        @font-face {
-            font-family: "Font03";
-            src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/font/MPLUS1P-EXTRABOLD.woff") format("woff");
-            font-weight: 800;
-            font-display: swap;
-        }
+    @font-face {
+      font-family: "M PLUS 1p";
+      src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/font/MPLUS1P-BOLD.woff") format("woff");
+      font-weight: 700;
+      font-display: swap;
+    }
 
-        @font-face {
-            font-family: "Font04";
-            src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/font/MPLUS1P-MEDIUM.woff") format("woff");
-            font-weight: 500;
-            font-display: swap;
-        }
+    @font-face {
+      font-family: "M PLUS 1p";
+      src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/font/MPLUS1P-EXTRABOLD.woff") format("woff");
+      font-weight: 800;
+      font-display: swap;
+    }
 
-        @font-face {
-            font-family: "Font05";
-            src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/font/MPLUS1P-REGULAR.woff") format("woff");
-            font-weight: 400;
-            font-display: swap;
-        }
+    @font-face {
+      font-family: "M PLUS 1p";
+      src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/font/MPLUS1P-BLACK.woff") format("woff");
+      font-weight: 900;
+      font-display: swap;
+    }
 
-        @font-face {
-            font-family: "Font06";
-            src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/font/BAHNSCHRIFT.woff") format("woff");
-            font-weight: 400;
-            font-display: swap;
-        }
+    /* =========================
+       Bahnschrift
+       ※ 太さの対応は仮設定
+    ========================= */
 
-        @font-face {
-            font-family: "Font07";
-            src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/font/BAHNSCHRIFT_1.woff") format("woff");
-            font-weight: 400;
-            font-display: swap;
-        }
+    @font-face {
+      font-family: "Bahnschrift";
+      src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/font/BAHNSCHRIFT.woff") format("woff");
+      font-weight: 400;
+      font-display: swap;
+    }
 
-        @font-face {
-            font-family: "Font08";
-            src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/font/BAHNSCHRIFT_2.woff") format("woff");
-            font-weight: 400;
-            font-display: swap;
-        }
+    @font-face {
+      font-family: "Bahnschrift";
+      src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/font/BAHNSCHRIFT_1.woff") format("woff");
+      font-weight: 500;
+      font-display: swap;
+    }
 
+    @font-face {
+      font-family: "Bahnschrift";
+      src: url("https://ys-projectfestaexecutivecommittee.github.io/27test/font/BAHNSCHRIFT_2.woff") format("woff");
+      font-weight: 600;
+      font-display: swap;
+    }
 
-        /* =========================
-           BASIC SETTINGS
-        ========================= */
+    /* =========================
+       全体のデザイン
+    ========================= */
 
-        * {
-            box-sizing: border-box;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        body {
-            margin: 0;
-            background: #f5f4f0;
-            color: #222;
-            font-family: Arial, sans-serif;
-        }
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #f5f5f5;
+      color: #222;
+      font-family: sans-serif;
+    }
 
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-        /* =========================
-           HEADER
-        ========================= */
+    h1 {
+      margin: 0 0 10px;
+      font-size: 32px;
+    }
 
-        .header {
-            padding: 35px 6%;
-            border-bottom: 1px solid #ccc;
-        }
+    .description {
+      margin-bottom: 35px;
+      color: #666;
+      line-height: 1.7;
+    }
 
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-            letter-spacing: 0.12em;
-        }
+    .section-title {
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ddd;
+      font-size: 23px;
+    }
 
-        .header p {
-            margin: 8px 0 0;
-            font-size: 10px;
-            letter-spacing: 0.2em;
-            color: #777;
-        }
+    .font-card {
+      margin-bottom: 18px;
+      padding: 24px;
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
 
+    .font-name {
+      margin-bottom: 12px;
+      color: #777;
+      font-size: 13px;
+      font-weight: 600;
+    }
 
-        /* =========================
-           MAIN CONTAINER
-        ========================= */
+    .font-sample {
+      font-size: 28px;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 70px 30px;
-        }
+    .font-info {
+      margin-top: 10px;
+      color: #999;
+      font-size: 12px;
+    }
 
-        .intro {
-            margin-bottom: 45px;
-        }
+    /* M PLUS 1p */
 
-        .intro span {
-            font-size: 10px;
-            letter-spacing: 0.2em;
-            color: #888;
-        }
+    .mplus {
+      font-family: "M PLUS 1p", sans-serif;
+    }
 
-        .intro h2 {
-            margin: 12px 0;
-            font-size: 32px;
-        }
+    .weight-400 { font-weight: 400; }
+    .weight-500 { font-weight: 500; }
+    .weight-700 { font-weight: 700; }
+    .weight-800 { font-weight: 800; }
+    .weight-900 { font-weight: 900; }
 
-        .intro p {
-            color: #777;
-            font-size: 13px;
-        }
+    /* Bahnschrift */
 
+    .bahnschrift {
+      font-family: "Bahnschrift", sans-serif;
+    }
 
-        /* =========================
-           FONT GRID
-        ========================= */
+    .bahnschrift-sample {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
 
-        .font-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
+    .control-area {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 18px 0;
+    }
 
-        .font-card {
-            background: #fff;
-            border: 1px solid #e5e3dd;
-        }
+    .control-area label {
+      font-size: 14px;
+      font-weight: 600;
+    }
 
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px 20px;
-            border-bottom: 1px solid #eee;
-            color: #999;
-            font-size: 10px;
-            letter-spacing: 0.15em;
-        }
+    select {
+      padding: 10px 14px;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      background: white;
+      font-size: 14px;
+      cursor: pointer;
+    }
 
-        .sample {
-            min-height: 220px;
-            padding: 30px 25px;
-            overflow-wrap: break-word;
-        }
+    .weight-display {
+      margin-top: 10px;
+      color: #777;
+      font-size: 13px;
+    }
 
-        .sample h2 {
-            margin: 0 0 20px;
-            font-size: 27px;
-            font-weight: normal;
-        }
+    @media (max-width: 600px) {
+      body {
+        padding: 25px 14px;
+      }
 
-        .sample .alphabet {
-            font-size: 15px;
-            line-height: 1.8;
-        }
+      h1 {
+        font-size: 26px;
+      }
 
-        .sample .numbers {
-            font-size: 17px;
-            letter-spacing: 0.04em;
-        }
+      .font-card {
+        padding: 18px;
+      }
 
-        .sample .sentence {
-            font-size: 13px;
-            line-height: 1.8;
-        }
-
-        .card-footer {
-            padding: 12px 20px;
-            border-top: 1px solid #eee;
-            color: #888;
-            font-size: 10px;
-            letter-spacing: 0.1em;
-        }
-
-
-        /* =========================
-           FONT APPLICATION
-        ========================= */
-
-        .font01 {
-            font-family: "Font01", sans-serif;
-            font-weight: 900;
-        }
-
-        .font02 {
-            font-family: "Font02", sans-serif;
-            font-weight: 700;
-        }
-
-        .font03 {
-            font-family: "Font03", sans-serif;
-            font-weight: 800;
-        }
-
-        .font04 {
-            font-family: "Font04", sans-serif;
-            font-weight: 500;
-        }
-
-        .font05 {
-            font-family: "Font05", sans-serif;
-            font-weight: 400;
-        }
-
-        .font06 {
-            font-family: "Font06", sans-serif;
-            font-weight: 400;
-        }
-
-        .font07 {
-            font-family: "Font07", sans-serif;
-            font-weight: 400;
-        }
-
-        .font08 {
-            font-family: "Font08", sans-serif;
-            font-weight: 400;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            padding: 25px;
-            border-top: 1px solid #ccc;
-            text-align: center;
-            color: #999;
-            font-size: 10px;
-            letter-spacing: 0.2em;
-        }
-
-
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
-        @media (max-width: 700px) {
-
-            .container {
-                padding: 45px 18px;
-            }
-
-            .font-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .intro h2 {
-                font-size: 25px;
-            }
-
-            .sample h2 {
-                font-size: 23px;
-            }
-        }
-
-    </style>
+      .font-sample {
+        font-size: 23px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <main class="container">
 
-<header class="header">
-    <h1>FONT COMPARISON</h1>
-    <p>8 TYPEFACES / FONT SPECIMEN</p>
-</header>
+    <h1>Font Comparison</h1>
+    <p class="description">
+      フォントの種類や太さを比較できるページです。
+      各フォントの表示を確認できます。
+    </p>
 
+    <!-- M PLUS 1p -->
 
-<main class="container">
+    <h2 class="section-title">M PLUS 1p</h2>
 
-    <section class="intro">
-        <span>TYPOGRAPHY COLLECTION</span>
-        <h2>Font Comparison</h2>
-        <p>Compare eight different typefaces using identical English text.</p>
-    </section>
+    <div class="font-card">
+      <div class="font-name">FONT 01 / BLACK</div>
+      <div class="font-sample mplus weight-900">
+        あいうえお ABCDEFG abcdefg 123456789
+      </div>
+      <div class="font-info">Weight: 900</div>
+    </div>
 
+    <div class="font-card">
+      <div class="font-name">FONT 02 / BOLD</div>
+      <div class="font-sample mplus weight-700">
+        あいうえお ABCDEFG abcdefg 123456789
+      </div>
+      <div class="font-info">Weight: 700</div>
+    </div>
 
-    <section class="font-grid">
+    <div class="font-card">
+      <div class="font-name">FONT 03 / EXTRABOLD</div>
+      <div class="font-sample mplus weight-800">
+        あいうえお ABCDEFG abcdefg 123456789
+      </div>
+      <div class="font-info">Weight: 800</div>
+    </div>
 
+    <div class="font-card">
+      <div class="font-name">FONT 04 / MEDIUM</div>
+      <div class="font-sample mplus weight-500">
+        あいうえお ABCDEFG abcdefg 123456789
+      </div>
+      <div class="font-info">Weight: 500</div>
+    </div>
 
-        <!-- FONT 01 -->
-        <article class="font-card">
-            <div class="card-header">
-                <span>FONT 01</span>
-                <span>01 / 08</span>
-            </div>
+    <div class="font-card">
+      <div class="font-name">FONT 05 / REGULAR</div>
+      <div class="font-sample mplus weight-400">
+        あいうえお ABCDEFG abcdefg 123456789
+      </div>
+      <div class="font-info">Weight: 400</div>
+    </div>
 
-            <div class="sample font01">
-                <h2>Typography Design</h2>
-                <p class="alphabet">
-                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                    abcdefghijklmnopqrstuvwxyz
-                </p>
-                <p class="numbers">
-                    0123456789 !@#$%^&*()
-                </p>
-                <p class="sentence">
-                    The quick brown fox jumps over the lazy dog.
-                </p>
-            </div>
+    <!-- Bahnschrift -->
 
-            <div class="card-footer">M PLUS 1p BLACK</div>
-        </article>
+    <h2 class="section-title">Bahnschrift</h2>
 
+    <div class="font-card">
+      <div class="font-name">FONT 06 / BAHNSCHRIFT</div>
 
-        <!-- FONT 02 -->
-        <article class="font-card">
-            <div class="card-header">
-                <span>FONT 02</span>
-                <span>02 / 08</span>
-            </div>
+      <div class="control-area">
+        <label for="bahnschrift-weight">文字の太さ：</label>
 
-            <div class="sample font02">
-                <h2>Typography Design</h2>
-                <p class="alphabet">
-                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                    abcdefghijklmnopqrstuvwxyz
-                </p>
-                <p class="numbers">
-                    0123456789 !@#$%^&*()
-                </p>
-                <p class="sentence">
-                    The quick brown fox jumps over the lazy dog.
-                </p>
-            </div>
+        <select id="bahnschrift-weight">
+          <option value="400">Regular（400）</option>
+          <option value="500">Normal（500）</option>
+          <option value="600">SemiBold（600）</option>
+        </select>
+      </div>
 
-            <div class="card-footer">M PLUS 1p BOLD</div>
-        </article>
+      <div id="bahnschrift-sample" class="bahnschrift bahnschrift-sample">
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        abcdefghijklmnopqrstuvwxyz
+        0123456789
+      </div>
 
+      <div id="weight-display" class="weight-display">
+        現在の太さ：Regular（400）
+      </div>
+    </div>
 
-        <!-- FONT 03 -->
-        <article class="font-card">
-            <div class="card-header">
-                <span>FONT 03</span>
-                <span>03 / 08</span>
-            </div>
+    <div class="font-card">
+      <div class="font-name">FONT 07 / BAHNSCHRIFT SAMPLE</div>
+      <div class="font-sample bahnschrift" style="font-weight: 500;">
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        abcdefghijklmnopqrstuvwxyz
+        0123456789
+      </div>
+      <div class="font-info">Weight: 500</div>
+    </div>
 
-            <div class="sample font03">
-                <h2>Typography Design</h2>
-                <p class="alphabet">
-                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                    abcdefghijklmnopqrstuvwxyz
-                </p>
-                <p class="numbers">
-                    0123456789 !@#$%^&*()
-                </p>
-                <p class="sentence">
-                    The quick brown fox jumps over the lazy dog.
-                </p>
-            </div>
+    <div class="font-card">
+      <div class="font-name">FONT 08 / BAHNSCHRIFT SAMPLE</div>
+      <div class="font-sample bahnschrift" style="font-weight: 600;">
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        abcdefghijklmnopqrstuvwxyz
+        0123456789
+      </div>
+      <div class="font-info">Weight: 600</div>
+    </div>
 
-            <div class="card-footer">M PLUS 1p EXTRA BOLD</div>
-        </article>
+  </main>
 
+  <script>
+    const weightSelect = document.getElementById("bahnschrift-weight");
+    const sample = document.getElementById("bahnschrift-sample");
+    const weightDisplay = document.getElementById("weight-display");
 
-        <!-- FONT 04 -->
-        <article class="font-card">
-            <div class="card-header">
-                <span>FONT 04</span>
-                <span>04 / 08</span>
-            </div>
+    const weightNames = {
+      "400": "Regular",
+      "500": "Normal",
+      "600": "SemiBold"
+    };
 
-            <div class="sample font04">
-                <h2>Typography Design</h2>
-                <p class="alphabet">
-                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                    abcdefghijklmnopqrstuvwxyz
-                </p>
-                <p class="numbers">
-                    0123456789 !@#$%^&*()
-                </p>
-                <p class="sentence">
-                    The quick brown fox jumps over the lazy dog.
-                </p>
-            </div>
+    weightSelect.addEventListener("change", function () {
+      const weight = this.value;
 
-            <div class="card-footer">M PLUS 1p MEDIUM</div>
-        </article>
+      sample.style.fontWeight = weight;
 
-
-        <!-- FONT 05 -->
-        <article class="font-card">
-            <div class="card-header">
-                <span>FONT 05</span>
-                <span>05 / 08</span>
-            </div>
-
-            <div class="sample font05">
-                <h2>Typography Design</h2>
-                <p class="alphabet">
-                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                    abcdefghijklmnopqrstuvwxyz
-                </p>
-                <p class="numbers">
-                    0123456789 !@#$%^&*()
-                </p>
-                <p class="sentence">
-                    The quick brown fox jumps over the lazy dog.
-                </p>
-            </div>
-
-            <div class="card-footer">M PLUS 1p REGULAR</div>
-        </article>
-
-
-        <!-- FONT 06 -->
-        <article class="font-card">
-            <div class="card-header">
-                <span>FONT 06</span>
-                <span>06 / 08</span>
-            </div>
-
-            <div class="sample font06">
-                <h2>Typography Design</h2>
-                <p class="alphabet">
-                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                    abcdefghijklmnopqrstuvwxyz
-                </p>
-                <p class="numbers">
-                    0123456789 !@#$%^&*()
-                </p>
-                <p class="sentence">
-                    The quick brown fox jumps over the lazy dog.
-                </p>
-            </div>
-
-            <div class="card-footer">BAHNSCHRIFT</div>
-        </article>
-
-
-        <!-- FONT 07 -->
-        <article class="font-card">
-            <div class="card-header">
-                <span>FONT 07</span>
-                <span>07 / 08</span>
-            </div>
-
-            <div class="sample font07">
-                <h2>Typography Design</h2>
-                <p class="alphabet">
-                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                    abcdefghijklmnopqrstuvwxyz
-                </p>
-                <p class="numbers">
-                    0123456789 !@#$%^&*()
-                </p>
-                <p class="sentence">
-                    The quick brown fox jumps over the lazy dog.
-                </p>
-            </div>
-
-            <div class="card-footer">BAHNSCHRIFT 01</div>
-        </article>
-
-
-        <!-- FONT 08 -->
-        <article class="font-card">
-            <div class="card-header">
-                <span>FONT 08</span>
-                <span>08 / 08</span>
-            </div>
-
-            <div class="sample font08">
-                <h2>Typography Design</h2>
-                <p class="alphabet">
-                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                    abcdefghijklmnopqrstuvwxyz
-                </p>
-                <p class="numbers">
-                    0123456789 !@#$%^&*()
-                </p>
-                <p class="sentence">
-                    The quick brown fox jumps over the lazy dog.
-                </p>
-            </div>
-
-            <div class="card-footer">BAHNSCHRIFT 02</div>
-        </article>
-
-
-    </section>
-
-</main>
-
-
-<footer>
-    FONT COMPARISON — TYPE SPECIMEN
-</footer>
-
+      weightDisplay.textContent =
+        "現在の太さ：" + weightNames[weight] + "（" + weight + "）";
+    });
+  </script>
 </body>
 </html>
